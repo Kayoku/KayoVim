@@ -56,6 +56,7 @@ filetype plugin indent on  " required
 "   Show the useless space
 "   Folding ?
 "   theme ?
+"   ALE when vim >= 8
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO
