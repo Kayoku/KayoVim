@@ -31,6 +31,9 @@ au BufNewFile, BufRead *.py
 	\ set autoindent
 	\ set fileformat=unix
 
+" Add search underlining
+:set hlsearch
+
 " Vundle
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -51,7 +54,7 @@ call vundle#begin()
 			\ "mode" : "passive",
 			\ "active_filetypes" : ["python"],
 			\ "passive_filetypes" : [] }
-		let g:syntastic_python_checkers = ['pylint', 'flake8', 'bandit']
+		let g:syntastic_python_checkers = ['pylint', 'flake8']
 		let g:syntastic_aggregate_errors = 1
 		let g:syntastic_always_populate_loc_list = 1
 		let g:syntastic_auto_loc_list = 1
@@ -60,7 +63,7 @@ call vundle#begin()
 	else
 		Plugin 'w0rp/ale'
 		let b:ale_linters = ['pylint', 'flake8', 'mypy']
-		let g:ale_open_list = 1
+		let g:ale_open_list = 0
 	endif
 
 call vundle#end()          " required
